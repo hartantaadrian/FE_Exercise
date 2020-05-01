@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+}
+.header{
+    background: #004AD8 center center no-repeat;
+    background-image: url('./assets/images/work-desk__dustin-lee.jpg');
+    background-size: cover;
+    background-blend-mode: multiply;
+    position: relative;
+    color: white
+}
+
+.container{
+    padding: 0 30px;
+    text-align: center;
+}
+
+#header-logo{
+    text-align: left;
+}
+
+#img-logo{
+    max-width: 50px;
+    max-height: 50px;
+}
+
+
+#headline{
+   padding: 146px 0;
+}
+
+#headline h1:first-child {
+    font-weight: normal;
+}
+
+#headline p {
+    font-size: 32px;
+    max-width: 56%;
+    margin: auto;
+}
+
+#headline a {
+    font-size: 24px;
+    max-width: 55%;
+    margin: auto;
+    margin-top:50px;
+    background-color:transparent;
+    border: 1px solid #fff
+}
+
+.btn{
+    background-color: #007bc1;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    padding: 10px 30px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+}
