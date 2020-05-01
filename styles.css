@@ -1,6 +1,19 @@
-body{
+*{
     margin: 0;
+    padding: 0;
 }
+
+@font-face{
+    font-family: 'roboto';
+    src: url('./assets/font/Roboto-Regular.ttf');
+    font-style: normal;
+    font-weight: 100;
+}
+
+body{
+    font-family: roboto;
+}
+
 .header{
     background: #004AD8 center center no-repeat;
     background-image: url('./assets/images/work-desk__dustin-lee.jpg');
@@ -11,7 +24,7 @@ body{
 }
 
 .container{
-    padding: 0 30px;
+    padding: 0 40px;
     text-align: center;
 }
 
@@ -26,6 +39,7 @@ body{
 
 
 #headline{
+    line-height: 1.7;
    padding: 146px 0;
 }
 
@@ -33,20 +47,27 @@ body{
     font-weight: normal;
 }
 
-#headline p {
-    font-size: 32px;
-    max-width: 56%;
+p {
+    font-size: 22px;
+    max-width: 40%;
     margin: auto;
 }
 
-#headline a {
-    font-size: 24px;
+.btn.btn-action {
+    text-transform: uppercase;
+    font-size: 18px;
     max-width: 55%;
     margin: auto;
-    margin-top:50px;
+    margin-top:40px;
     background-color:transparent;
     border: 1px solid #fff
 }
+
+.btn.btn-action:hover {
+   background-color: white;
+   color: #007bc1;
+}
+
 
 .btn{
     background-color: #007bc1;
@@ -56,11 +77,61 @@ body{
     cursor: pointer;
     display: inline-block;
     outline: none;
-    padding: 10px 30px;
+    padding: 10px 20px;
     position: relative;
     text-align: center;
     text-decoration: none;
     text-transform: none;
     vertical-align: middle;
     -webkit-tap-highlight-color: transparent;
+}
+
+
+/* hightlight section*/
+
+#highlight-section{
+    background-color: #e5e5e5;
+   
+}
+
+#highlight-header{
+    padding: 80px 0 0;
+}
+
+#highlight-subtitle{
+    max-width: 57%;
+    margin-top: 12px;
+}
+
+#highlight-panel{
+    display: grid;
+    grid-template-columns: minmax(min-content, 428px) minmax(min-content, 428px) minmax(min-content, 428px) ;
+    grid-gap: 30px;
+    padding: 50px 0;
+    justify-content: space-between;
+}
+
+.highlight-items-header{
+   display: flex
+}
+
+.highlight-items{
+    border: 1px solid;
+    padding: 20px;
+}
+
+.highlight-items-header i{
+    margin-left:auto;
+}
+
+.highlight-items-content-container{
+    margin-top: 10px;
+}
+
+.highlight-items-content{
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+    max-width: 373px;
 }
