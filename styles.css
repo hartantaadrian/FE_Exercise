@@ -12,15 +12,85 @@
 
 body{
     font-family: roboto;
+    position: relative;
 }
 
+
+.btn{
+    background-color: #007bc1;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    padding: 10px 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/*notification section */
+.fixed-top{
+    top: 0;
+    position: fixed;
+    z-index: 1030;
+    width: 100%;
+}
+
+
+#notification-panel{
+    background-color: #e5e5e5;
+    transition: all 1.5s linear;
+}
+
+.moving {
+    transform: translateY(-200px);
+}
+
+.notification-container{
+    max-width: 720px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: minmax(min-content,555px) auto;
+    padding: 10px 0;
+    grid-gap: 5px;
+}
+
+.notification-container p{
+   font-size: 14px;
+   padding: 5px;
+   padding-left: 32px;
+}
+
+.btn-notif{
+    font-size: 16px;
+    max-width: 42px;
+    margin:auto 0;
+    top : 0;
+   
+}
+
+
+
+/*header section */
 .header{
     background: #004AD8 center center no-repeat;
     background-image: url('./assets/images/work-desk__dustin-lee.jpg');
     background-size: cover;
     background-blend-mode: multiply;
     position: relative;
-    color: white
+    color: white;
+    margin-top: 64px;
+    transition: margin-top .5s linear;;
+}
+
+.to-top{
+    margin-top: 0;
 }
 
 .container{
@@ -47,7 +117,7 @@ body{
     font-weight: normal;
 }
 
-p {
+.headline p  {
     font-size: 22px;
     max-width: 40%;
     margin: auto;
@@ -69,22 +139,7 @@ p {
 }
 
 
-.btn{
-    background-color: #007bc1;
-    border: none;
-    border-radius: 3px;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    outline: none;
-    padding: 10px 20px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    text-transform: none;
-    vertical-align: middle;
-    -webkit-tap-highlight-color: transparent;
-}
+
 
 
 /* hightlight section*/
@@ -99,8 +154,10 @@ p {
 }
 
 #highlight-subtitle{
+    font-size: 22px;
     max-width: 57%;
     margin-top: 12px;
+    margin: auto;
 }
 
 #highlight-panel{
@@ -141,4 +198,110 @@ p {
     background-color: #004a75;
     color: white;
     padding: 50px;
+}
+
+/*newsteller section */
+.newsteller{
+    position: fixed;
+    bottom: 0;
+    background-color: #fefefe;
+    width: 100%;
+    display: none;
+    max-width: 640px;
+
+}
+
+.slide-in {
+    display: block;
+    position: absolute;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+}
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+
+.slide-out {
+    -webkit-animation-name: slideOut;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideOut;
+    animation-duration: 0.4s; 
+    
+}
+@-webkit-keyframes slideOut {
+    0%{
+        opacity: 1;
+        transform: translateX(0);
+      }
+      50%{
+        opacity: 0.5;
+        transform: translateX(-50%);
+      }
+      100%{
+        display: none;
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+}
+
+@keyframes slideOut {
+    0%{
+        opacity: 1;
+        transform: translateX(0);
+      }
+      50%{
+        opacity: 0.5;
+        transform: translateX(-50%);
+      }
+      100%{
+        display: none;
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+}
+
+.newsteller-container{
+    background: #004AD8 center center no-repeat;
+    color: white;
+    padding: 30px 20px;
+}
+
+.close-continer{
+    float:right;
+}
+
+.close-continer i{
+    cursor: pointer;
+}
+
+.newsteller-title {
+    margin: 10px 0;
+}
+.newsteller-content {
+    line-height: 1.5;
+    font-size: 1em;
+}
+
+.newsteller-form{
+    margin-top:20px
+}
+
+.newsteller-form input[type="email"] {
+    width: 70%;
+    padding: 3px 10px;
+    border-radius: 3px;
+}
+
+.newsteller-form input[type="button"] {
+    background-color: #ff8800;
+    padding: 5px 10px;
 }

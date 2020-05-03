@@ -6,10 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href="./assets/fontawesome/css/all.min.css" rel="stylesheet">
+    <script src="index.js"></script>
     <title>Cermati FrontEnd Test</title>
 </head>
 
 <body>
+    <section id="notification-panel" class="fixed-top">
+        <div class="notification-container">
+            <p>By accessing and using this website, you acknowledge that you have read and
+                understand our Cookie Policy, Privacy Policy, and our Terms of Service.</p>
+            <a onclick="onNotifClick()" class="btn btn-notif">Got it</a>
+        </div>
+    </section>
     <header class="header">
         <div class="container">
             <div id="header-logo">
@@ -125,11 +133,24 @@
             </div>
         </div>
     </section>
-    <section id="footer">
+    <section id="footer" class="footer">
         <div class="container footer-container">
             <p><i class="fas fa-copyright fa-xs"></i> 2020 Adrian Hartanta. All right reserved</p>
         </div>
     </section>
+    <div id="newsteller" class="newsteller">
+        <div class="newsteller-container">
+            <div class="close-continer"><i class="fas fa-times fa-s" onclick="slideOut()"></i></div>
+            <h1 class="newsteller-title">Get latest updates in web technologies</h1>
+            <p class="newsteller-content">I write articles related to web technologies, such as design trends, development
+                tools, UI/UX case studies and reviews, and more. Sign up to my newsletter to get
+                them all.
+            </p>
+            <form class="newsteller-form">
+                <input type="email"/>
+                <input type="button" class="btn" value="Count me in!"/>
+            </form>
+        </div>
+    </div>
 </body>
-
 </html>
