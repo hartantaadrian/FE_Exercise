@@ -10,11 +10,12 @@
     <title>Cermati FrontEnd Test</title>
 </head>
 
-<body>
+<body onload="checkNewstellerstat()">
     <section id="notification-panel" class="fixed-top">
         <div class="notification-container">
             <p>By accessing and using this website, you acknowledge that you have read and
-                understand our Cookie Policy, Privacy Policy, and our Terms of Service.</p>
+                understand our <a class="notification-link">Cookie Policy</a>, <a class="notification-link">Privacy
+                    Policy</a>, and our <a class="notification-link">Terms of Service</a>.</p>
             <a onclick="onNotifClick()" class="btn btn-notif">Got it</a>
         </div>
     </section>
@@ -24,16 +25,16 @@
                 <img src="assets/images/y-logo-white.png" alt="logo" id="img-logo" />
             </div>
             <div id="headline">
-                <h1>Hello! I'm Adrian Hartanta</h1>
-                <h1>Consult, Design, and Develop Websites</h1>
-                <p>Have something great in mind? Feel free to contact me.
+                <h1 id="headline-name">Hello! I'm Adrian Hartanta</h1>
+                <h1 id="headline-highlight">Consult, Design, and Develop Websites</h1>
+                <p id="headline-desc">Have something great in mind? Feel free to contact me.
                     I'll help you to make it happen.
                 </p>
                 <a class="btn btn-action">Let's Make Contact</a>
             </div>
         </div>
     </header>
-    <section id="highlight-section">
+       <section id="highlight-section">
         <div class="container">
             <div id="highlight-header">
                 <h1>How Can I Help You?</h1>
@@ -133,6 +134,8 @@
             </div>
         </div>
     </section>
+    
+
     <section id="footer" class="footer">
         <div class="container footer-container">
             <p><i class="fas fa-copyright fa-xs"></i> 2020 Adrian Hartanta. All right reserved</p>
@@ -142,15 +145,17 @@
         <div class="newsteller-container">
             <div class="close-continer"><i class="fas fa-times fa-s" onclick="slideOut()"></i></div>
             <h1 class="newsteller-title">Get latest updates in web technologies</h1>
-            <p class="newsteller-content">I write articles related to web technologies, such as design trends, development
+            <p class="newsteller-content">I write articles related to web technologies, such as design trends,
+                development
                 tools, UI/UX case studies and reviews, and more. Sign up to my newsletter to get
                 them all.
             </p>
             <form class="newsteller-form">
-                <input type="email"/>
-                <input type="button" class="btn" value="Count me in!"/>
+                <input type="email" />
+                <input type="button" class="btn" value="Count me in!" />
             </form>
         </div>
     </div>
 </body>
+
 </html>

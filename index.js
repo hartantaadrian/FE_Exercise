@@ -37,10 +37,10 @@ const inView = () => {
 // animate element when it is in view
 const animate = () => {
     // is element in view?
-    if (inView() && visited===0 ) {
+    if (inView() && visited === 0) {
         // element is in view, add class to element
         newsteller.classList.add('slide-in');
-        visited =1
+        visited = 1
 
     }
 }
@@ -48,9 +48,49 @@ const animate = () => {
 // listen for scroll event and call animate function
 document.addEventListener('scroll', animate);
 
+
+
+function setCookie(name,value,time) {
+    var expires = "";
+    if (time) {
+        var date = new Date();
+        date.setTime(date.getTime() + (time*60000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+function eraseCookie(name) {   
+    document.cookie = name+'=; Max-Age=-99999999;';  
+}
+
+
 const slideOut = () => {
     newsteller = document.getElementById("newsteller");
     newsteller.classList.add('slide-out');
     setTimeout(() => { newsteller.classList.remove('slide-in'); }, 400);
-    
+
+    let startDate = new Date();
+    let endDate = new Date ( startDate );
+    endDate.setMinutes ( startDate.getMinutes() + 10 );
+    setCookie('closedstatcokkie',endDate,10); 
 }
+
+const checkNewstellerstat= ()=>{
+    var haveClosed = getCookie('closedstatcokkie');
+    if(haveClosed){
+        visited = 1
+    }
+}
+
+
+
