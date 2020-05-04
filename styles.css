@@ -379,7 +379,7 @@ body{
 
     #highlight-subtitle {
         margin-top: 15px;
-        font-size: 20px;
+        font-size: 1.1em;
     } 
     #highlight-panel {
         grid-template-columns: auto;
