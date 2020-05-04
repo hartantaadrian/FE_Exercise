@@ -100,6 +100,7 @@ body{
 .container{
     padding: 0 40px;
     text-align: center;
+    margin: auto;
 }
 
 #header-logo{
@@ -158,7 +159,8 @@ body{
 }
 
 #highlight-subtitle{
-  
+    max-width: 550px;
+    margin: 20px auto 0;
 }
 
 #highlight-panel{
@@ -199,6 +201,7 @@ body{
     background-color: #004a75;
     color: white;
     padding: 50px;
+    text-align: center;
 }
 
 /*newsteller section */
@@ -413,6 +416,24 @@ body{
 
 @media  (max-width: 349px){
     .header {
-        margin-top: 135px;
+        margin-top: 124px;
+        transition: all .9s linear;
+    }
+    .to-top{
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 1380px){
+    .container {
+        width: 1360px;
+    }
+    .header {
+        margin-top: 150px;
+        transition: all 1.2s linear;
+    }
+
+    .to-top{
+        margin-top: 0;
     }
 }
